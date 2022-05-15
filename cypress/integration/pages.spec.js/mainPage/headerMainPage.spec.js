@@ -1,4 +1,4 @@
-describe('Testando o testador', () => {
+describe('Verifica se o cabeçalho possui os componentes corretos e necessarios', () => {
   beforeEach(() => {
     cy.visit('pages/mainPage.html');
   });
@@ -16,4 +16,4 @@ describe('Testando o testador', () => {
         .find('a')
           .should('have.length', 8)
   });
-})
+});
