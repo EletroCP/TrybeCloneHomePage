@@ -1,0 +1,25 @@
+{
+  "name": "trybeclonehomepage",
+  "version": "1.0.0",
+  "description": "Pagina feita inteiramente em HTML e CSS baseada na pagina  home da Trybe: https://www.betrybe.com/",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "cypress:open": "cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EletroCP/TrybeCloneHomePage.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EletroCP/TrybeCloneHomePage/issues"
+  },
+  "homepage": "https://github.com/EletroCP/TrybeCloneHomePage#readme",
+  "devDependencies": {
+    "cypress": "^9.6.1",
+    "jest": "^28.1.0"
+  }
+}
