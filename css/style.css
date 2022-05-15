@@ -98,11 +98,11 @@ span {
   padding: 12px 13px;
   color: whitesmoke;
   border-radius: 5px;
-  background-color: rgb(0, 109, 251);
+  background-color: rgb(56, 152, 236);
 }
 
 .subscribe:hover {
-  background-color: rgb(56, 152, 236);
+  background-color: rgb(0, 109, 251);
 }
 .heroImage {
   padding: 0 20px 20px;
