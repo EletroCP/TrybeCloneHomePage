@@ -24,7 +24,6 @@ span {
   display: flex;
   position: fixed;
   justify-content: space-around;
-  padding: 10px 0;
   width: 100%;
 }
 
