@@ -88,6 +88,6 @@ describe('Verifica se o cabeçalho possui os componentes corretos e necessarios'
         .find('a')
           .contains('Inscreva-se')
             .click()
-  cy.url().should('includes', 'pages/registration.html')
+    cy.url().should('includes', 'pages/registration.html')
   });
 });

@@ -26,13 +26,13 @@ describe('Verifica se a section "hero" possui os recursos corretos', () => {
         .should('have.class', 'heroSection')
           .find('a')
   })
+
   it('O botão redireciona para a pagina de inscrição', () => {
     cy.get('body')
       .find('section')
-        .should('have.class', 'heroSection')
-          .find('p')
-            .click()
-    cy.url().should('includes', 'pages/inscrevase.html')
+        .find('a')
+          .click()
+    cy.url().should('includes', 'pages/registration.html')
   })
   it('O componente possui a heroImage', () => {
     cy.get('body')
