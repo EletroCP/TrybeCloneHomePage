@@ -1,4 +1,4 @@
-describe('Verifica se a section "hero" possui os recursos corretos', () => {
+describe('Verifica se a section "trainedPeople" possui os recursos corretos', () => {
   beforeEach(() => {
     cy.visit('pages/mainPage.html');
   });
