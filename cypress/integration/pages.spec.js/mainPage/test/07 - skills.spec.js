@@ -1,5 +1,5 @@
 describe('O component "skills" possui todos os elementos', () => {
-  beforeEacho(() => {
+  beforeEach(() => {
     cy.visit('pages/mainPage.html');
   });
 
