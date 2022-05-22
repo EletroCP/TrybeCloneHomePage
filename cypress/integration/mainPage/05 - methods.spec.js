@@ -19,110 +19,88 @@ describe('Testa se o componente "methods", possui todos os elementos necessarios
   const thirdHoverMainText = 'Ensinamos tudo que o mercado busca: conhecimento em programação e soft skills.';
   
   it('O componente "methods" possui um titulo', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('h2')
-              .should('contain', methodTitle);
+    cy.get('section.methods')
+        .find('h2')
+          .should('contain', methodTitle);
   });
 
   it('O componente "methods" possui um sub titulo', () => {
-    cy.get('body')
-      .find('section')
-        .should('have.class', 'methods')
-          .find('p')
-            .should('contain', methodSubtitle);
+    cy.get('section.methods')     
+        .find('p')
+          .should('contain', methodSubtitle);
   });
 
   it('O componente "firstHover" possui uma imagem', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'firstHover')
-                .find('img')
-                  .should('have.src', firstHoverIcon)
+    cy.get('section.methods')
+        .find('div')
+          .should('have.class', 'firstHover')
+            .find('img')
+              .should('have.src', firstHoverIcon)
   });
 
   it('O componente "firstHover" possui um texto', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'firstHover')
-                .find('p')
-                  .should('contain', firstHoverText)
+    cy.get('section.methods')
+        .find('div')
+          .should('have.class', 'firstHover')
+            .find('p')
+              .should('contain', firstHoverText)
   });
 
   it('O texto principal referente ao componente "firstHover" é exibido', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'firstHoverMainText')
-                .invoke('text')
-                  .should('have.src', firstHoverMainText)
+    cy.get('section.methods')
+        .find('div')
+          .should('have.class', 'firstHoverMainText')
+            .invoke('text')
+              .should('have.src', firstHoverMainText)
   });
 
   it('O componente "secondHover" possui uma imagem', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'secondHover')
-                .find('img')
-                  .should('have.src', secondHoverIcon)
+    cy.get('section.methods')
+        .find('div')
+          .should('have.class', 'secondHover')
+            .find('img')
+              .should('have.src', secondHoverIcon)
   });
 
   it('O componente "secondHover" possui um texto', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'secondHover')
-                .find('p')
-                  .should('contain', secondHoverText)
+    cy.get('section.methods')
+        .find('div')
+          .should('have.class', 'secondHover')
+            .find('p')
+              .should('contain', secondHoverText)
   });
 
   it('O texto referente ao componente "secondHover" é exibido', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'secondHoverMainText')
-                .trigger('mousehover')
-                  .invoke('text')
-                    .should('have.src', secondHoverMainText)
+    cy.get('section.methods')
+        .find('div')
+          .should('have.class', 'secondHoverMainText')
+            .trigger('mousehover')
+              .invoke('text')
+                .should('have.src', secondHoverMainText)
   });
 
   it('O componente "thirdHover" possui uma imagem', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'thirdHover')
-                .find('img')
-                  .should('have.src', thirdHoverIcon)
+    cy.get('section.methods')         
+        .find('div')
+          .should('have.class', 'thirdHover')
+            .find('img')
+              .should('have.src', thirdHoverIcon)
   });
 
   it('O componente "thirdHover" possui um texto', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'thirdHover')
-                .find('p')
-                  .should('contain', thirdHoverText)
+    cy.get('section.methods')         
+        .find('div')
+          .should('have.class', 'thirdHover')
+            .find('p')
+              .should('contain', thirdHoverText)
   });
 
   it('O texto referente ao componente "thirdHover" é exibido', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'methods')
-            .find('div')
-              .should('have.class', 'thirdHoverMainText')
-                .trigger('mousehover')
-                  .invoke('text')
-                    .should('have.src', thirdHoverMainText)
+    cy.get('section.methods')          
+        .find('div')
+          .should('have.class', 'thirdHoverMainText')
+            .trigger('mousehover')
+              .invoke('text')
+                .should('have.src', thirdHoverMainText)
   });
 });
