@@ -3,7 +3,7 @@ describe('Verifica se a section "reports" possui os recursos corretos', () => {
     cy.visit('pages/mainPage.html');
   });
 
-  const cardImage = 'https://assets-global.website-files.com/61549abf6fb9ca5e91bc5709/61549abf6fb9cadd60bc5798_Ellipse%201.png';
+  const cardImage = '../src/report01_Ellipse 1.png';
   const cardName = 'Anderson Adriano Godoy';
   const cardContract = 'Contratado pela Accenture';
   const cardDescription ="Iniciei minha jornada na Trybe em Abril e logo nos primeiros meses já me senti muito mais confiante, que em anos de faculdade e pós graduação. Com apenas 2 meses de curso, junto a um amigo, fomos capazes de criar um site com informações em tempo real do COVID-19. Desafios e projetos práticos, nos proporcionam uma vivência real do dia a dia de uma pessoa desenvolvedora, atrelado às soft skills. Tenho a plena certeza que venho me tornando uma pessoa melhor!";
@@ -15,11 +15,11 @@ describe('Verifica se a section "reports" possui os recursos corretos', () => {
   });
 
   it('O primeiro card possui uma img', () => {
-    cy.get('body')
-        .find('section#reports')
-          .find('div')
-            .find('img')
-              .should('have.src', cardImage)
+    cy.get('section#reports')
+        .find('div#Anderson')
+          .find('img')
+            .should('have.attr', 'src')
+              .should('include', cardImage)
   });
 
   it('O primeiro card possui o nome do aluno', () => {
