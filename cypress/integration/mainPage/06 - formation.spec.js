@@ -3,7 +3,7 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
     cy.visit('pages/mainPage.html');
   });
 
-  const studantImage = 'https://assets-global.website-files.com/61549abf6fb9ca5e91bc5709/61a63619b1532da5f56f8e55_estudante-trybe.png';
+  const studantImage = '../src/methodsImage.png';
 
   it('O componente possui um titulo', () => {
     cy.get('section.formation')
@@ -40,7 +40,7 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
   it('O "modulo 2" possui o respectivo texto', () => {
     cy.get('section.formation')
         .find('div#methods')
-          .find('p#methodsTxt2')
+          .find('span#method2')
             .find('p')
               .invoke('text')
                 .should('contain', 'Desenvolvimento Front-end')
@@ -57,7 +57,7 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
   it('O "modulo 3" possui o respectivo texto', () => {
     cy.get('section.formation')
         .find('div#methods')
-         .find('p#methodsTxt3')
+         .find('span#method3')
           .find('p')
             .invoke('text')
               .should('contain', 'Desenvolvimento Back-end')
@@ -68,13 +68,13 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
         .find('div#methods')
           .find('span#method4')
             .find('h1')
-              .should('contain', 'Módulo 1:')
+              .should('contain', 'Módulo 4:')
   });
 
   it('O "modulo 4" possui o respectivo texto', () => {
     cy.get('section.formation')
         .find('div#methods')
-          .find('p#methodsTxt4')
+          .find('span#method4')
             .find('p')
               .invoke('text')
                 .should('contain', 'Ciência da Computação')
@@ -82,22 +82,19 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
 
   it('O componente possui uma imagem', () => {
     cy.get('section.formation')
-        .find('div#methods')
-          .find('img')
-            .should('have.attr', 'src')
-              .should('contain', studantImage)
+        .find('img')
+          .should('have.attr', 'src')
+            .should('contain', studantImage)
   });
   
   it('O componente possui um botão para o pdf da formação', () => {
     cy.get('section.formation')
-        .find('div#methods')
-            .find('p#getFormation')
+        .find('p#getFormation')
   });
   
   it('Ao cliclar no botão um span abre', () => {
     cy.get('section.formation')
-        .find('div#methods')
-          .find('p#getFormation')
-            .click()
+        .find('p#getFormation')
+          .click()
   });//testes ainda precisam ser escritos.
 });
