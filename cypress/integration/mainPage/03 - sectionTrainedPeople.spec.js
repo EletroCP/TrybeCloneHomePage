@@ -7,13 +7,17 @@ describe('Verifica se a section "trainedPeople" possui os recursos corretos', ()
 
   it('O componente possui um titulo', () => {
     cy.get('body')
-        .find('h1')
-          .should('contain', '92%')
+        .find('section')
+          .should('have.class', 'trainedPeopleSection')
+            .find('h1')
+              .should('contain', '92%')
   });
 
   it('O componente possui o texto informativo', () => {
     cy.ge('body')
-      .find('p')
-        .should('contain', trainedPeople)
+        .find('section')
+          .should('have.class', 'trainedPeopleSection')
+            .find('p')
+              .should('contain', trainedPeople)
   });
 });
