@@ -15,61 +15,69 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
   it('O "modulo 1" possui o respectivo titulo', () => {
     cy.get('section.formation')
         .find('div#methods')
-          .find('spam#method1')
-            .should('contain', 'Módulo 1:')
+          .find('span#method1')
+            .find('h1')
+              .should('contain', 'Módulo 1:')
   });
 
   it('O "modulo 1" possui o respectivo texto', () => {
     cy.get('section.formation')
         .find('div#methods')
-         .find('p#methodsTxt1')
-          .invoke('text')
-            .should('contain', 'Fundamentos de desenvolvimento web')
+          .find('span#method1')
+            .find('p')
+              .invoke('text')
+                .should('contain', 'Fundamentos de desenvolvimento web')
   });
 
   it('O "modulo 2" possui o respectivo titulo', () => {
     cy.get('section.formation')
     .find('div#methods')
-      .find('spam#method2')
-        .should('contain', 'Módulo 2:')
+      .find('span#method2')
+        .find('h1')
+          .should('contain', 'Módulo 2:')
   });
 
   it('O "modulo 2" possui o respectivo texto', () => {
     cy.get('section.formation')
         .find('div#methods')
-         .find('p#methodsTxt2')
-          .invoke('text')
-            .should('contain', 'Desenvolvimento Front-end')
+          .find('p#methodsTxt2')
+            .find('p')
+              .invoke('text')
+                .should('contain', 'Desenvolvimento Front-end')
   });
 
   it('O "modulo 3" possui o respectivo titulo', () => {
     cy.get('section.formation')
         .find('div#methods')
-          .find('spam#method3')
-            .should('contain', 'Módulo 3:')
+          .find('span#method3')
+            .find('h1')
+              .should('contain', 'Módulo 3:')
   });
 
   it('O "modulo 3" possui o respectivo texto', () => {
     cy.get('section.formation')
         .find('div#methods')
          .find('p#methodsTxt3')
-          .invoke('text')
-            .should('contain', 'Desenvolvimento Back-end')
+          .find('p')
+            .invoke('text')
+              .should('contain', 'Desenvolvimento Back-end')
   });
 
   it('O "modulo 4" possui o respectivo titulo', () => {
     cy.get('section.formation')
         .find('div#methods')
-          .find('spam#method1')
-            .should('contain', 'Módulo 1:')
+          .find('span#method4')
+            .find('h1')
+              .should('contain', 'Módulo 1:')
   });
 
   it('O "modulo 4" possui o respectivo texto', () => {
     cy.get('section.formation')
         .find('div#methods')
-         .find('p#methodsTxt4')
-          .invoke('text')
-            .should('contain', 'Ciência da Computação')
+          .find('p#methodsTxt4')
+            .find('p')
+              .invoke('text')
+                .should('contain', 'Ciência da Computação')
   });
 
   it('O componente possui uma imagem', () => {
@@ -86,7 +94,7 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
             .find('p#getFormation')
   });
   
-  it('Ao cliclar no botão um spam abre', () => {
+  it('Ao cliclar no botão um span abre', () => {
     cy.get('section.formation')
         .find('div#methods')
           .find('p#getFormation')
