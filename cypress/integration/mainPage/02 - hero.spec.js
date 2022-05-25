@@ -29,7 +29,7 @@ describe('Verifica se a section "hero" possui os recursos corretos', () => {
 
   it('O botão redireciona para a pagina de inscrição', () => {
     cy.get('body')
-      .find('section')
+      .find('section.heroSection')
         .find('a')
           .click()
     cy.url().should('includes', 'pages/registration.html')

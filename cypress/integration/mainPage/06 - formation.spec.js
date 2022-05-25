@@ -92,9 +92,11 @@ describe('Verifica se o componente "formation" possui todos os elementos', () =>
         .find('p#getFormation')
   });
   
-  it('Ao cliclar no botão um span abre', () => {
+  it('Ao clicar no botão um span abre', () => {
     cy.get('section.formation')
         .find('p#getFormation')
           .click()
-  });//testes ainda precisam ser escritos.
+    cy.get('button#downloadPDF')
+              
+  });
 });
