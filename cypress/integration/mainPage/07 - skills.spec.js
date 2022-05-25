@@ -3,63 +3,67 @@ describe('O component "skills" possui todos os elementos', () => {
     cy.visit('pages/mainPage.html');
   });
 
-  const tagIcon = 'https://assets-global.website-files.com/61549abf6fb9ca5e91bc5709/61549abf6fb9ca328ebc575c_Group.svg';
-  const heartIcon = 'https://assets-global.website-files.com/61549abf6fb9ca5e91bc5709/61549abf6fb9caca24bc575d_Vector.svg';
-  const paperPlane = 'https://assets-global.website-files.com/61549abf6fb9ca5e91bc5709/61549abf6fb9ca5464bc575b_Group-1.svg';
+  const tagIcon = '../src/tagIcon2.svg';
+  const heartIcon = '../src/heartIco.svg';
+  const paperPlane = '../src/papperPlaneIco.svg';
   
   it('O componente possui um titulo', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'skills')
-            .find('h1')
-              .should('have.value', 'Durante toda a formação')
+    cy.get('section#skills')
+        .find('h1')
+          .should('have.text', 'Durante toda a formação')
   });
 
   it('O componente possui a imagem de "tag"', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'skills')
+    cy.get('section#skills')
+        .find('div#icons')
+          .find('div#tag')
             .find('img')
-              .should('have.src', tagIcon)
+              .should('have.attr', 'src')
+                .should('contain', tagIcon)
   });
 
   it('O componente possui a imagem de "coração"', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'skills')
+    cy.get('section#skills')
+        .find('div#icons')
+          .find('div#heart')
             .find('img')
-              .should('have.src', heartIcon)
+              .should('have.attr', 'src')
+                .should('contain', heartIcon)
   });
 
   it('O componente possui a imagem de "aviãozinho"', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'skills')
+    cy.get('section#skills')
+        .find('div#icons')
+          .find('div#plane')
             .find('img')
-              .should('have.src', paperPlane)
+              .should('have.attr', 'src')
+                .should('contain', paperPlane)
   });
 
   it('O texto de "desenvolvimento" está presente', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'skills')
+    cy.get('section#skills')
+        .find('div#icons')
+          .find('div#tag')
             .find('p')
-              .should('have.value', 'Desenvolvimento de software na vida real');
+              .invoke('text')
+                .should('contain', 'Desenvolvimento de software na vida real');
   });
 
   it('O texto de "skill" está presente', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'skills')
+    cy.get('section#skills')
+        .find('div#icons')
+          .find('div#heart')
             .find('p')
-              .should('have.value', 'Soft skills');
+              .invoke('text')
+                .should('contain', 'Soft skills');
   });
 
   it('O texto de "metodologias" está presente', () => {
-    cy.get('body')
-        .find('section')
-          .should('have.class', 'skills')
+    cy.get('section#skills')
+        .find('div#icons')
+          .find('div#plane')
             .find('p')
-              .should('have.value', 'Metodologias ágeis');
+              .invoke('text')
+                .should('contain', 'Metodologias ágeis');
   });
 });
