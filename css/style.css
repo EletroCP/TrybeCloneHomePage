@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   font-family:sans-serif;
+  background-color: antiquewhite;
 }
 
 a {
@@ -15,6 +16,10 @@ a {
 
 span {
   border-bottom: 2px solid rgb(47, 193, 140);
+}
+
+img {
+  max-width: 5%;
 }
 
 .header {
